@@ -63,6 +63,24 @@ Add the following configuration to your MCP client:
 }
 ```
 
+### Graphs
+
+```json
+{
+	"mcpServers": {
+		"CodeGPT": {
+			"command": "node",
+			"args": ["/path/to/build/directory", "/graph.js"],
+			"env": {
+				"CODEGPT_API_KEY": "your-api-key",
+				"CODEGPT_ORG_ID": "optional",
+            "CODEGPT_GRAPH_ID": "your-graph-id"
+			}
+		}
+	}
+}
+```
+
 ## Available Tools
 
 ### 1. list-agents

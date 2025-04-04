@@ -5,7 +5,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const CODEGPT_API_BASE = "https://api.codegpt.co/api/v1";
+const CODEGPT_API_BASE = "http://localhost:8000/api/v1";
 const server = new McpServer({
 	name: "CodeGPT",
 	version: "1.0.0",
@@ -19,6 +19,8 @@ const server = new McpServer({
 
 const CODEGPT_ORG_ID = process.env.CODEGPT_ORG_ID || "";
 const CODEGPT_API_KEY = process.env.CODEGPT_API_KEY || "";
+const CODEGPT_GRAPH_ID = process.env.GRAPH_ID || "";
+
 
 if (!CODEGPT_API_KEY) {
 	throw new Error("CODEGPT_API_KEY is not set");
